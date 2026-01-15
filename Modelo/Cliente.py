@@ -8,5 +8,9 @@ class Cliente(Persona):
         self.__fechaPrestamo = fechaPrestamo
         self.__fechaDevolucion = fechaDevolucion
 
-    #Getter setter, herencia
-        
+    #Getter setter
+    def toString():
+        return(f"Nombre: {Persona.__nombre}\n" 
+               f"Apellido: {Persona.__apellido}\n"
+                f"Historial: {Cliente.__historial}\n"
+               )
