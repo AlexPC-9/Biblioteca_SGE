@@ -7,3 +7,11 @@ class ClienteSocio(Cliente):
         self.__duracionPrestamoPremium = duracionPrestamoPremium
 
         
+    def aplica_descuento(self, producto):
+        precioOriginal = producto.precio
+        desc = precioOriginal * 0.20
+        nuevoPrecio = precioOriginal - desc
+        print(f"Socio {self.__idSocio} Ha obtenido un descuento de socio")
+        print(f"precio original: {precioOriginal}, con descuento: {nuevoPrecio}")
+
+        
