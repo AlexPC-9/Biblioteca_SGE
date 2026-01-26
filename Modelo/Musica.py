@@ -6,3 +6,10 @@ class Musica(Producto):
         self.__remix = remix
         self.__single = single
         self.__album = album
+
+
+    def detalle_artista(self):
+        if self.__single == True:
+            return f"Sencillo de {self.__cantantes}"
+        else:
+            return f"Álbum '{self.__album}' de {self.__cantantes}"

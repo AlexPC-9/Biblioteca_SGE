@@ -6,3 +6,6 @@ class Libro(Producto):
         self.__editorial = editorial
         self.__paginas = paginas
         self.__autor = autor
+
+    
+    

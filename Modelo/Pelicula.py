@@ -9,4 +9,8 @@ class Pelicula(ContenidoMultimedia):
         self.__calidadImagen = calidadImagen
         
     #GETTER Y SETTER
-    
+    def necesita_pantalla_4K(self):
+        if self.__calidadImagen == "4K":
+            return True
+        else:
+            return False
