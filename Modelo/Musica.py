@@ -1,15 +1,15 @@
-from Producto import Producto
-class Musica(Producto):
-    def __init__(self, cantantes, remix, single, album):
-        super().__init__(self.__categoria, self.__antiguedad, self.__fechaPublicacion, self.__precio, self.__garantia)
-        self.__cantantes = cantantes
-        self.__remix = remix
-        self.__single = single
+from .ContenidoMultimedia import ContenidoMultimedia
+
+class Musica(ContenidoMultimedia):
+    def __init__(self, categoria, antiguedad, fecha, precio, garantia, 
+                 tipo, duracion, calidadAudio, 
+                 artista, album, es_single):
+        
+        super().__init__(categoria, antiguedad, fecha, precio, garantia, tipo, duracion, calidadAudio)
+        
+        self.__artista = artista
         self.__album = album
+        self.__es_single = es_single
 
-
-    def detalle_artista(self):
-        if self.__single == True:
-            return f"Sencillo de {self.__cantantes}"
-        else:
-            return f"Álbum '{self.__album}' de {self.__cantantes}"
+    def __str__(self):
+        return f"Música: {self.__artista} - Álbum: {self.__album}"

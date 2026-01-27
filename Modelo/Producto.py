@@ -6,6 +6,9 @@ class Producto:
         self.__precio = precio
         self.__garantia = garantia
     
+    @property
+    def precio(self):
+        return self.__precio  
 
     def calcular_precio_actual(self):
         if self.__antiguedad > 5:

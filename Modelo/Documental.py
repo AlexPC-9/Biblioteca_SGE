@@ -1,9 +1,17 @@
-from ContenidoMultimedia import ContenidoMultimedia
+from .ContenidoMultimedia import ContenidoMultimedia
 
-class Documental:
-    def __init__(self, enseñanza, ambientacion, calidadImagen):
-        super().__init__(self.__tipo, self.__duracion, self.__calidadAudio)
+class Documental(ContenidoMultimedia):
+   
+    def __init__(self, categoria, antiguedad, fecha, precio, garantia, 
+                 tipo, duracion, calidadAudio, 
+                 enseñanza, ambientacion, calidadImagen):
+        
+       
+        super().__init__(categoria, antiguedad, fecha, precio, garantia, tipo, duracion, calidadAudio)
+    
         self.__enseñanza = enseñanza
         self.__ambientacion = ambientacion
         self.__calidadImagen = calidadImagen
-        
+
+    def __str__(self):
+        return f"Documental: {self.__enseñanza} | Calidad: {self.__calidadImagen}"

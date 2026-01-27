@@ -1,21 +1,24 @@
-from Biblioteca_SGE.Modelo import Libro
-
+from .Libro import Libro
 
 class Biblioteca:
-
     def __init__(self, nombreBiblioteca, ubicacionBiblioteca):
         self.__nombreBiblioteca = nombreBiblioteca
         self.__ubicacionBiblioteca = ubicacionBiblioteca
         self.inventario = []  
         self.usuarios = []
 
+    # GETTERS Y SETTERS corregidos
+    @property
+    def nombreBiblioteca(self):
+        return self.__nombreBiblioteca
 
-    #GETTER Y SETTER
+    @nombreBiblioteca.setter
+    def nombreBiblioteca(self, valor):
+        self.__nombreBiblioteca = valor
 
 
-    def mostrar_biblioteca(self):
-        print(f"Biblioteca: {self.nombre_biblioteca}")
-        print(f"Total de productos: {len(self.inventario)}")
+    def __str__(self):
+        return f"Biblioteca: {self.__nombreBiblioteca} | Ubicación: {self.__ubicacionBiblioteca}"
 
     def buscar_por_autor(self, autor_buscado):
         resultados = []
@@ -23,12 +26,11 @@ class Biblioteca:
             if isinstance(producto, Libro):
                 if producto.autor == autor_buscado:
                     resultados.append(producto)
-                
         return resultados
 
     def realizar_prestamo(self, cliente, producto):
         if producto in self.inventario:
-            cliente.escoger_producto(producto)
+            cliente.escoger_producto(producto) 
             self.inventario.remove(producto)
             print(f"Préstamo realizado: {producto} entregado a {cliente.nombre}")
         else:

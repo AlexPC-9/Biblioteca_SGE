@@ -1,22 +1,26 @@
 class Persona:
+
     def __init__(self, nombre, apellido, DNI, numTelefono):
         self.__nombre = nombre
         self.__apellido = apellido
         self.__DNI = DNI
         self.__numTelefono = numTelefono
 
-    # GETTER
     @property
     def nombre(self):
         return self.__nombre
 
-    # SETTER
-    @nombre.setter
-    def nombre(self, nuevo_nombre):
-        if len(nuevo_nombre) > 0:
-            self.__nombre = nuevo_nombre
-        else:
-            print("Error: El nombre no puede estar vacío")
+    @property
+    def apellido(self): # <--- Añade esto
+        return self.__apellido
+
+    @property
+    def dni(self): # <--- Añade esto (fíjate que lo usamos en minúsculas en convertir_Socio)
+        return self.__DNI
+
+    @property
+    def numTelefono(self): # <--- Añade esto
+        return self.__numTelefono
 
     def toString(self):
-        return f"DNI: {self.__DNI} | Nombre Completo: {self.__nombre} {self.__apellido}"
+        return f"\n DNI: {self.__DNI} \n Nombre Completo: {self.__nombre} {self.__apellido}"

@@ -15,7 +15,7 @@ class Bibliotecario(Persona):
         self.__idTrabajador = valor
 
     def toString(self):
-        return f"{super().toString()} | ID Empleado: {self.__idTrabajador} | Turno: {self.__turno}"
+        return f"{super().toString()} \n ID Empleado: {self.__idTrabajador} \n Turno: {self.__turno}"
     
     def insertarLibros(self, biblioteca, nuevoLibro):
         biblioteca.inventario.append(nuevoLibro)
@@ -27,5 +27,5 @@ class Bibliotecario(Persona):
     
     def invitado_a_socio(self, invitado, nuevo_id):
         print(f"bibliotecario: {self.nombre}")
-        nuevo_socio = invitado.convertir_socio(nuevo_id)
+        nuevo_socio = invitado.convertir_Socio(nuevo_id)
         return nuevo_socio

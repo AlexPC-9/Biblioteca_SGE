@@ -1,8 +1,14 @@
-from ContenidoMultimedia import ContenidoMultimedia
+
+from .ContenidoMultimedia import ContenidoMultimedia
 
 class Pelicula(ContenidoMultimedia):
-    def __init__(self, reparto, director, ubicacion, calidadImagen):
-        super().__init__(self.__tipo, self.__duracion, self.__calidadAudio)
+   
+    def __init__(self, categoria, antiguedad, fecha, precio, garantia, 
+                 tipo, duracion, calidadAudio, 
+                 reparto, director, ubicacion, calidadImagen):
+        
+        super().__init__(categoria, antiguedad, fecha, precio, garantia, tipo, duracion, calidadAudio)
+        
         self.__reparto = reparto
         self.__director = director
         self.__ubicacion = ubicacion
@@ -14,3 +20,8 @@ class Pelicula(ContenidoMultimedia):
             return True
         else:
             return False
+        
+
+   
+    def __str__(self):
+        return f"Película: {self.__director} | Formato: {self.__calidadImagen} | Ubicación: {self.__ubicacion}"

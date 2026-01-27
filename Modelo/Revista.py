@@ -5,4 +5,8 @@ class Revista(Libro):
         self.__regalo = regalo
         self.__marca = marca
 
-    #SUPER, GETTER Y SETTER
+    def regaloOfrecido(self):
+        if self.__regalo == True:
+             return f"Esta revista tiene regalo y es {self.__regalo}"
+        else:
+            return f"Esta revista no tiene regalo."
