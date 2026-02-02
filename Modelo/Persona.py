@@ -11,15 +11,15 @@ class Persona:
         return self.__nombre
 
     @property
-    def apellido(self): # <--- Añade esto
+    def apellido(self): 
         return self.__apellido
 
     @property
-    def dni(self): # <--- Añade esto (fíjate que lo usamos en minúsculas en convertir_Socio)
+    def dni(self): 
         return self.__DNI
 
     @property
-    def numTelefono(self): # <--- Añade esto
+    def numTelefono(self): 
         return self.__numTelefono
 
     def toString(self):

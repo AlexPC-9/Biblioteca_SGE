@@ -1,7 +1,11 @@
-from Libro import Libro
+from Modelo.Libro import Libro
+from Modelo.Libro import Libro
+
 class Revista(Libro):
-    def __init__(self, regalo, marca):
-        super().__init__(self.__ISBN, self.__editorial, self.__paginas, self.__autor)
+   
+    def __init__(self, ISBN, editorial, paginas, autor, regalo, marca):
+        super().__init__("Revista", 0, "2024", 5, "N/A", ISBN, editorial, paginas, autor)
+        
         self.__regalo = regalo
         self.__marca = marca
 

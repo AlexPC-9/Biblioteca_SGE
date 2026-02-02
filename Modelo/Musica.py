@@ -12,4 +12,4 @@ class Musica(ContenidoMultimedia):
         self.__es_single = es_single
 
     def __str__(self):
-        return f"Música: {self.__artista} - Álbum: {self.__album}"
+        return f"\n Música: {self.__artista} \n Álbum: {self.__album}\n"

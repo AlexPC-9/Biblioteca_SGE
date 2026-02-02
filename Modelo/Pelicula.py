@@ -24,4 +24,4 @@ class Pelicula(ContenidoMultimedia):
 
    
     def __str__(self):
-        return f"Película: {self.__director} | Formato: {self.__calidadImagen} | Ubicación: {self.__ubicacion}"
+        return f"Película: \n Director : {self.__director} \n Formato: {self.__calidadImagen} \n Ubicación: {self.__ubicacion}\n"

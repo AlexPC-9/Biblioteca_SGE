@@ -1,13 +1,14 @@
-from Libro import Libro
-class LibroAnimado(Libro):
-    def __init__(self, tipo, idioma):
-        super().__init__(self.__ISBN, self.__editorial, self.__paginas, self.__autor)
-        self.__tipo = tipo
-        self.__idioma = idioma
+from Modelo.Libro import Libro
 
-    
+class LibroAnimado(Libro):
+    def __init__(self, ISBN, editorial, paginas, autor, idioma, tipo="general"):
+        super().__init__("Animado", 1, "2024", 12, "6 meses", ISBN, editorial, paginas, autor)
+        
+        self.__idioma = idioma
+        self.__tipo = tipo 
+
     def apto_para_niños(self):
         if self.__tipo == "niños":
-            print("Ideal para niños pequeños..")
+            return "Ideal para niños pequeños."
         else:
-            print("Apto para todas las edades.")
+            return "Apto para todas las edades."

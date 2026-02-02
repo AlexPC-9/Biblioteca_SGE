@@ -14,4 +14,4 @@ class Documental(ContenidoMultimedia):
         self.__calidadImagen = calidadImagen
 
     def __str__(self):
-        return f"Documental: {self.__enseñanza} | Calidad: {self.__calidadImagen}"
+        return f"\n Documental: {self.__enseñanza} \n Calidad: {self.__calidadImagen}\n"

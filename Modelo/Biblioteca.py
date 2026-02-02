@@ -18,7 +18,7 @@ class Biblioteca:
 
 
     def __str__(self):
-        return f"Biblioteca: {self.__nombreBiblioteca} | Ubicación: {self.__ubicacionBiblioteca}"
+        return f"Biblioteca: {self.__nombreBiblioteca} \n Ubicación: {self.__ubicacionBiblioteca}"
 
     def buscar_por_autor(self, autor_buscado):
         resultados = []

@@ -1,3 +1,6 @@
+from Modelo.Periodico import Periodico
+from Modelo.LibroAnimado import LibroAnimado
+from Modelo.Revista import Revista
 from Modelo.ClienteInvitado import ClienteInvitado
 from Modelo.Biblioteca import Biblioteca
 from Modelo.Bibliotecario import Bibliotecario
@@ -14,7 +17,7 @@ class controller:
         view.imprimir("INICIO DE SESION, SELECCIONA TU USUARIO:\n")
         view.imprimir("1- Acceso Personal (Bibliotecario)")
         view.imprimir("2 - Acceso Usuario (Socio / Invitado)")
-        perfil = input("Seleccione perfil")
+        perfil = input("Seleccione perfil \n")
         if perfil == "1":
             self.menu_bibliotecario()
         else:
@@ -190,14 +193,20 @@ class controller:
     historial=[],prodPrestado=None,fechaPrest="---",fechaDev="---",idTemporal="001",  duracionPrestamo=7)
 
         socio = ClienteSocio("Alex", "Perez", "12345678X", "600123456", [], False, "---", "---", "SOCIO-001", 365)
-
-
-        self.biblioteca.usuarios.append(usuario_ejemplo)
+        Revista1 = Revista(123343, "Maybelline", 40, "Noelle - REVISTA", True, "Maybelline")
+        Manga = LibroAnimado("1773626G", "ABC", 20, "Kiroto Yashima - MANGA", "Japones", "general")
+        periodico = Periodico("12833","New York",230, "Emily - PERIODICO", "Clla infena", "Papel")
+        
         self.biblioteca.inventario.append(libro1)
         self.biblioteca.inventario.append(libro2)
         self.biblioteca.inventario.append(peli1)
         self.biblioteca.inventario.append(Musica1)
         self.biblioteca.inventario.append(Doc)
+        self.biblioteca.inventario.append(Revista1)
+        self.biblioteca.inventario.append(Manga)
+        self.biblioteca.inventario.append(periodico)
+
+        self.biblioteca.usuarios.append(usuario_ejemplo)
         self.biblioteca.usuarios.append(socio)
         self.biblioteca.usuarios.append(usuario_ejemplo)
 
